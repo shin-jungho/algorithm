@@ -11,7 +11,6 @@ function solution(arr, div) {
   // answer.length === 0 ? answer.push(-1) : answer.sort((a, b) => a - b)
   
   return answer.length === 0 ? [-1] : answer.sort((a, b) => a - b); 
-  // [-1] 바로 쓰려면 return에 써야됨
 }
 
 // map 사용해서 문제풀이
@@ -21,9 +20,9 @@ function solution(arr, div) {
     if (el % div === 0) {
       answer.push(el);
     }
-  })
+  });
 
-  return answer.length === 0 ? [-1] : answer.sort((a, b) => a - b)
+  return answer.length === 0 ? [-1] : answer.sort((a, b) => a - b);
 }
 
 
