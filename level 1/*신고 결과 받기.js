@@ -21,7 +21,7 @@
 function solution(id_list, report, k) {
   const answer = new Array(id_list.length).fill(0);
   const reportedList = {}; // 신고당한 id
-  // const setReport = new Set(report); // 중복제거
+  // const setReport = new Set(report); // 중복제거 - 33 ~ 35번 코드로 대체
 
   id_list.map((user) => { // key = userid를 value = 빈 배열 가지는 객체
     reportedList[user] = [];
@@ -35,7 +35,7 @@ function solution(id_list, report, k) {
     } // if절 -> 신고자 포함되는지 보고 안되어있을때 이름 추가(중복제거)
   });
 
-  for(const key in reportedList) {
+  for(const key in reportedList) { // 이용 정지 유저
     if(reportedList[key].length >= k) {
       reportedList[key].map((user) => {
         answer[id_list.indexOf(user)] += 1;
@@ -48,4 +48,4 @@ function solution(id_list, report, k) {
 console.log(solution(["muzi", "frodo", "apeach", "neo"], ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"], 2));
 
 
-// new Array(id_list.length).fill(0) 하는이유? 
+// new Array(id_list.length).fill(0) 하는이유? - element가 number인 배열로 나와야되기 때문
