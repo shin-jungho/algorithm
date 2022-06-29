@@ -999,8 +999,3 @@
 // 문자열 -> 아스키코드 : s.charCodeAt()
 // 아스키코드 -> 문자열 : String.fromCharCode()
 
-function solution(s, n) {
-  var answer = '';
-  return answer;
-}
-
