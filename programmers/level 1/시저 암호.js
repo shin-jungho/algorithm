@@ -9,3 +9,10 @@ function solution(s, n) {
       return v.toUpperCase().charCodeAt()+n > 90 ? String.fromCharCode(v.charCodeAt()+n-26) : String.fromCharCode(v.charCodeAt()+n)
   }).join('');
 }
+
+// let s = 'AB';
+let s = 'a B z';
+let n = 1;
+
+
+console.log(solution(s, n));
