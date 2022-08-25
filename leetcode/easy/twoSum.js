@@ -8,6 +8,11 @@ var twoSum = function(nums, target) {
   }
 };
 
+// Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+var twoSum = function(nums, target) {
+  
+};
+
 //* 시간 복잡도 좋은경우 hash, dictionary 사용해서 시간복잡도 줄이기
 // var twoSum = function(nums, target) {
 //   var map = {};
